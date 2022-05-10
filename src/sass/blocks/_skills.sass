@@ -1,0 +1,87 @@
+.skills
+    min-height: 610px
+    padding: 91px 0 110px 0
+    &__descr
+        margin-top: 69px
+        font-weight: 500
+        font-size: 18px
+        line-height: 22px
+        text-align: center
+        color: #070707
+    &__wrap
+        display: flex
+        justify-content: space-between
+        margin-top: 83px
+    &__item
+        display: flex
+        flex-direction: column
+        justify-content: center
+        &__img
+            display: block
+            margin: 0 auto
+        &__descr
+            margin-top: 23px
+            font-weight: 700
+            font-size: 14px
+            line-height: 17px
+            text-align: center
+            color: #828282
+            min-height: 35px
+        &__grade
+            display: flex
+            justify-content: space-between
+            width: 166px
+            margin-top: 40px
+            &__star
+                position: relative
+                display: block
+                color: #000
+                width: 0px
+                height: 0px
+                border-right:  10px solid transparent
+                border-bottom: 7px  solid #e5e5e5
+                border-left:   10px solid transparent
+                -moz-transform:    rotate(35deg)
+                -webkit-transform: rotate(35deg)
+                -ms-transform:     rotate(35deg)
+                -o-transform:      rotate(35deg)
+                z-index: -1
+
+                &.active 
+                    border-bottom: 7px  solid #000
+                    &:before 
+                        border-bottom: 8px solid #000
+                    &::after
+                        border-bottom: 7px solid #000
+
+                &:before 
+                    content: ''
+                    border-bottom: 8px solid #e5e5e5
+                    border-left: 3px solid transparent
+                    border-right: 3px solid transparent
+                    position: absolute
+                    height: 0
+                    width: 0
+                    top: -5px
+                    left: -6px
+                    display: block
+                    -webkit-transform: rotate(-35deg)
+                    -moz-transform:    rotate(-35deg)
+                    -ms-transform:     rotate(-35deg)
+                    -o-transform:      rotate(-35deg)
+                &:after 
+                    content: ''
+                    position: absolute
+                    display: block
+                    color: #000
+                    top: 0px
+                    left: -10px
+                    width: 0px
+                    height: 0px
+                    border-right: 10px solid transparent
+                    border-bottom: 7px solid #e5e5e5
+                    border-left: 10px solid transparent
+                    -webkit-transform: rotate(-70deg)
+                    -moz-transform:    rotate(-70deg)
+                    -ms-transform:     rotate(-70deg)
+                    -o-transform:      rotate(-70deg)
