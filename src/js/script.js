@@ -1,6 +1,6 @@
 window.addEventListener('DOMContentLoaded', () => {
     const menu = document.querySelector('.menu'),
-    menuItem = document.querySelectorAll('.menu_item'),
+    menuItem = document.querySelectorAll('.menu__item'),
     hamburger = document.querySelector('.hamburger');
 
     hamburger.addEventListener('click', () => {
@@ -14,6 +14,56 @@ window.addEventListener('DOMContentLoaded', () => {
             menu.classList.toggle('menu_active');
         })
     })
+
+    let ruLang = document.querySelector('#ru'),
+        engLang = document.querySelector('#eng'),
+        menuLink = document.querySelectorAll('.menu__link'),
+        subheaderTitle = document.querySelector('.subheader__title'),
+        subheaderInfo = document.querySelector('.subheader__info'),
+        twoTitles = document.querySelectorAll('h2'),
+        aboutDescr = document.querySelectorAll('.about__descr'),
+        skillsDescr = document.querySelector('.skills__descr'),
+        portfolioDesrc = document.querySelectorAll('.portfolio__descr'),
+        footerDescr = document.querySelector('.footer__descr'),
+        footerText = document.querySelector('.footer__text'),
+        btn = document.querySelectorAll('button'),
+        modalSubtitle = document.querySelectorAll('.modal__subtitle'),
+        modalDescr = document.querySelectorAll('.modal__descr');
+
+    ruLang.addEventListener('click', function () {
+        menuLink[0].textContent = 'Гланая';
+        menuLink[1].textContent = 'Обо мне';
+        menuLink[2].textContent = 'Навыки';
+        menuLink[3].textContent = 'Портфолио';
+        menuLink[4].textContent = 'Контакты';
+        subheaderTitle.textContent = 'Денис Новик';
+        subheaderInfo.textContent = 'UX | UI-дизайнер 24 года, Минск.';
+        twoTitles[0].textContent = 'Обо мне';
+        twoTitles[1].textContent = 'Навыки';
+        twoTitles[2].textContent = 'Портфолио';
+        twoTitles[3].textContent = 'Контакты';
+        aboutDescr[0].textContent = 'Привет, я Денис — UX/UI дизайнер из Минска. Интересуюсь дизайном и всем, что с ним связано.';
+        aboutDescr[1].textContent = 'Я учусь на курсах "Веб и мобильный дизайн и интерфейсы» в IT-Академии.';
+        aboutDescr[2].textContent = 'Готовы реализовать отличные проекты с замечательными людьми.';
+        skillsDescr.textContent = 'Я работаю в таких программах как:';
+        portfolioDesrc[0].textContent = 'Интернет-магазин модной одежды - Домашняя страница';
+        portfolioDesrc[1].textContent = 'Магазин Reebok - Концепция';
+        portfolioDesrc[2].textContent = 'Целевая страница Braun - Концепция';
+        footerDescr.textContent = 'Хотите узнать больше или просто поболтать? Добро пожаловать!';
+        footerText.textContent = 'Ищите меня на LinkedIn, Instagram, Behance, Dribble';
+        btn[0].textContent = 'Отправить сообщение';
+        btn[1].textContent = 'Заказать консультацию';
+        modalSubtitle[0] = 'Просто заполните форму заявки';
+        modalSubtitle[1] = 'Спасибо за вашу заявку!';
+        modalDescr[0] = 'и я перезвоню вам в течение 10 минут';
+        modalDescr[1] = 'Я свяжусь с вами в ближайшее время!';
+    });
+
+    engLang.addEventListener('click', function() {
+        location.reload();
+    });
+
+
 })
 
 //цвет выбранного элемента меню, убирает и раздает класс
@@ -88,3 +138,27 @@ function validateForms(form){
     });
     return false;
 });
+
+// переключение языка
+
+// window.addEventListener('DOMContentLoaded', () => {
+//     const ru = document.querySelector('#ru'),
+//           eng = document.querySelector('#eng');
+
+//     let menuLink = document.querySelectorAll('.menu__link'),
+//         subheaderTitle = document.querySelector('.subheader__title'),
+//         subheaderInfo = document.querySelector('.subheader__info'),
+//         twoTitles = document.querySelectorAll('h2'),
+//         aboutDescr = document.querySelectorAll('.about__descr'),
+//         skillsDescr = document.querySelector('.skills__descr'),
+//         portfolioDesrc = document.querySelectorAll('.portfolio__descr'),
+//         footerDescr = document.querySelector('.footer__descr'),
+//         footerText = document.querySelector('.footer__text'),
+//         btn = document.querySelectorAll('button');
+
+
+//     ru.addEventListener('click', function () {
+//         subheaderInfo.textContent = 'UX | UI-дизайнер 24 года, Минск.';
+//     });
+
+// });
